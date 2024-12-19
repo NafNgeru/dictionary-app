@@ -9,7 +9,8 @@ More specifically, the program is able to:
 
 ## Prerequisites 
 Clone the repository `git clone <https://github.com/NafNgeru/dictionary-app>`
-To view the live webpage, click on the live link: https://nafngeru.github.io/interactive-shopping-list-code-challenge/
+To view the live webpage, click on the live link: https://nafngeru.github.io/dictionary-app/
+
 
 ### Author: Naftaly Ngeru
 - Incase your stuck or there is an error somewhere, contact me on Mattermost on naftaly.kamonjo@student.moringaschool.com 
