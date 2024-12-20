@@ -16,6 +16,7 @@ header {
     color: #fff;
     padding: 10px 0;
     height: 300px;
+    border-radius: 5px;
 }
 
 header nav ul {
@@ -33,6 +34,7 @@ form {
     margin: auto;
     display: flex;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .itemInput {
@@ -42,6 +44,7 @@ form {
     font-size:30px;
     padding: 15px;
     width:350px;
+    border-radius: 10px;
 }
 .submit-btn {
     width: 200px;
@@ -50,6 +53,7 @@ form {
     color: #fff;
     font-size: 30px;
     height: 100%;
+    border-radius: 10px;
 }
 
 h1 {

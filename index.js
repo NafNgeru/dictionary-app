@@ -1,3 +1,4 @@
+//DOM Content Load the whole file
 document.addEventListener('DOMContentLoaded', () => {
     const inputField = document.querySelector('.itemInput');
     const submitButton = document.querySelector('#submitName'); 
@@ -19,9 +20,9 @@ const word = inputField.value.trim();
 fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
 .then(response => {
     if (!response.ok) {
-        return Promise.reject("Word not found.");// Ensure the word is in the dictionary API
+        return Promise.reject("Word not found."); // Ensure that the user input is not null
         }
-        return response.json();
+        return response.json(); 
         })
         .then(data => {updateWordDetails(word, data);}) // Update DOM with word information user has inputted
             .catch(error => {
@@ -35,10 +36,10 @@ function updateWordDetails(word, data) {
     searchWordElement.textContent = `Word: ${word}`;
     descriptionElement.innerHTML = ''; // Clear previous results
 
-    data.forEach(entry => {
-        entry.meanings.forEach(meaning => {
+    data.forEach(search => {
+        search.meanings.forEach(meaning => {
         const partOfSpeech = document.createElement('h3');//Create part of speech from recieved JSON data in the h3 data
-        partOfSpeech.textContent = `Part of Speech: ${meaning.partOfSpeech}`;a//Return string to be portrayed for each part of speech data
+        partOfSpeech.textContent = `Part of Speech: ${meaning.partOfSpeech}`; //Return string to be portrayed for each part of speech data
             
         const definitionsList = document.createElement('ul'); //Create definitions list variable for the JSON data
     
@@ -53,8 +54,8 @@ function updateWordDetails(word, data) {
     }
        definitionsList.appendChild(listItem); //append the list items on the definitions list variable
            });
-     descriptionElement.appendChild(partOfSpeech);
-     descriptionElement.appendChild(definitionsList);
+     descriptionElement.appendChild(partOfSpeech); //append the parts of speech elements from the data
+     descriptionElement.appendChild(definitionsList); //append the definitions
 });
 });
 }
