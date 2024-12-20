@@ -12,7 +12,7 @@ body {
 header {
     font-size: xx-large;
     font-family: Georgia;
-    background: #4ee739;
+    background: #41503f;
     color: #fff;
     padding: 10px 0;
     height: 300px;
@@ -24,10 +24,7 @@ header nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-header nav ul li {
-    margin: 0;
+    color: #564fb9;
 }
 
 form {
@@ -63,7 +60,7 @@ h1 {
 }
 
 .search-result{
-    background-color: #4ee739;
+    background-color: #41503f;
     height: 1000px;
     padding:20px;
     height: max-content;
@@ -96,6 +93,6 @@ footer {
 }
 
 footer a {
-    color: #4ee739;
+    color: #41503f;
     text-decoration: none;
 }
